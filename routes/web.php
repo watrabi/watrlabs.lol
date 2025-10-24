@@ -6,6 +6,8 @@ global $router; // IMPORTANT: KEEP THIS HERE!
 global $pagebuilder;
 
 $router->get("/", function() {
+    $fun + 3;
+
     global $twig;
     echo $twig->render('default.twig');
 });

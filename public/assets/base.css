@@ -9,7 +9,7 @@
     --warning-color: #ffc800;
     --sidebar-color: #f1f1f1;
     --primary-color: #1dd0d1;
-    --seconday-color: #21afb0;
+    --secondary-color: #21afb0;
     --disabled-color: #0b5657;
     
 }
@@ -185,4 +185,19 @@ input {
 
 .button {
     background-color: var(--primary-color);
+}
+
+#error-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+#error_emoji {
+    margin-left: 15px;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
 }
