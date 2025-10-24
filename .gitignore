@@ -1,0 +1,6 @@
+public/.well-known
+.env
+public/.user.ini
+vendor
+storage/cache/*
+phinx.php

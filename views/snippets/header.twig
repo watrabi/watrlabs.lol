@@ -1,0 +1,22 @@
+{% block navbar %}
+<div id="navbar">
+    <div class="nav-group">
+        <a href="#" class="nav-item" id="sidebar-nav"><i class="fa-solid fa-bars"></i></a>
+        <a href="/" class="nav-item">{{ env('APP_NAME') }}</a>
+        <a href="/" class="nav-item">Home</a>
+    </div>
+    <div class="nav-group">
+        <a href="/" class="nav-item">Sign Up</a>
+        <a href="/" class="nav-item">Login</a>
+    </div>
+</div>
+<div id="site-warning">
+    <p>This site is incomplete!</p>
+</div>
+<div id="main">
+    <div id="sidebar" class="side-hidden">
+        <div id="main">
+            
+        </div>
+    </div>
+{% endblock %}
