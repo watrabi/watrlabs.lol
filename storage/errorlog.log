@@ -1,0 +1,16 @@
+ErrorException: Undefined variable $fun in /www/wwwroot/watrlabs.lol/routes/web.php:9
+Stack trace:
+#0 /www/wwwroot/watrlabs.lol/routes/web.php(9): {closure}()
+#1 [internal function]: watrlabs\router\Routing->{closure}()
+#2 /www/wwwroot/watrlabs.lol/classes/watrlabs/router/routing.php(80): call_user_func()
+#3 /www/wwwroot/watrlabs.lol/public/index.php(40): watrlabs\router\Routing->dispatch()
+#4 {main}
+
+ErrorException: Undefined variable $fun in /www/wwwroot/watrlabs.lol/routes/web.php:9
+Stack trace:
+#0 /www/wwwroot/watrlabs.lol/routes/web.php(9): {closure}()
+#1 [internal function]: watrlabs\router\Routing->{closure}()
+#2 /www/wwwroot/watrlabs.lol/classes/watrlabs/router/routing.php(80): call_user_func()
+#3 /www/wwwroot/watrlabs.lol/public/index.php(40): watrlabs\router\Routing->dispatch()
+#4 {main}
+

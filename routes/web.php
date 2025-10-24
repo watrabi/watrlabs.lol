@@ -6,12 +6,15 @@ global $router; // IMPORTANT: KEEP THIS HERE!
 global $pagebuilder;
 
 $router->get("/", function() {
-    //global $pagebuilder;
-    //$pagebuilder->setPage("../views/default.php");
-    //$pagebuilder->buildpage();
+    $fun + 3;
 
     global $twig;
     echo $twig->render('default.twig');
+});
+
+$router->set404(function(){
+    global $twig;
+    echo $twig->render('status_codes/404.twig');
 });
 
 /*

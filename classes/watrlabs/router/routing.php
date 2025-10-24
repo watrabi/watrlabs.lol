@@ -9,6 +9,7 @@ class Routing {
     protected array $prefix = [];
     protected $currentprefix = '';
     protected $currentmiddleware = null;
+    protected $notfound = null;
 
     protected function addRoute(string $method, string $uri, callable $callback): void {
         $fullUri = $this->currentprefix . (rtrim($uri, '/') ?: '/');
@@ -104,9 +105,12 @@ class Routing {
         require_once "../routes/{$routername}.php";
     }
 
-    static function return_status($statuscode){
-        $pagebuilder = new pagebuilder();
-        $pagebuilder->get_template("status_codes/$statuscode");
+    public function set404($function){
+        $this->notfound = $function;
+    }
+
+    public function return_status($statuscode){
+        call_user_func($this->notfound);
         http_response_code($statuscode);
     }
     

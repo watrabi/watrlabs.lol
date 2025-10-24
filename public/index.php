@@ -57,15 +57,15 @@ function handle_error($e){
         ob_clean();
         file_put_contents("../storage/errorlog.log", $e . "\n\n", FILE_APPEND);
         http_response_code(500);
-        require("../views/status_codes/500.php");
+        global $twig;
+        echo $twig->render('status_codes/500.twig');
     } catch(ErrorException $e){
         $log->internal_log($e, "Site Error!");
         ob_clean();
         http_response_code(500);
         echo $e;
         file_put_contents("../storage/errorlog.log", $e . "\n\n", FILE_APPEND);
-        require("../views/really_bad_500.php");
-        die();
+        die("Couldn't process your request. Please try again later.");
     }
 }
 
