@@ -15,6 +15,12 @@ try {
         global $db;
         global $router;
 
+        if(isset($_ENV["APP_DEBUG"])){
+            if($_ENV["APP_DEBUG"] !== "true"){
+                error_reporting(0);
+            }
+        }
+
         ob_start();
 
         $auth = new authentication();

@@ -3,7 +3,6 @@ use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
 global $dotenv;
 global $db;
-global $pagebuilder;
 global $twig;
 
 spl_autoload_register(function ($class_name) {
@@ -50,4 +49,3 @@ $twig->addFunction(new \Twig\TwigFunction('env', function ($key) {
     return $_ENV[$key];
 }));
 
-$pagebuilder = new \watrlabs\watrkit\pagebuilder();
