@@ -4,3 +4,4 @@ public/.user.ini
 vendor
 storage/cache/*
 phinx.php
+storage/errorlog.log
