@@ -28,7 +28,8 @@ try {
 
         $routers = [
             "web",
-            "auth"
+            "auth",
+            "authapi"
         ];
 
         foreach ($routers as $r) {

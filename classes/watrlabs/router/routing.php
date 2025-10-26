@@ -77,7 +77,14 @@ class Routing {
         $uri = rtrim($uri, '/') ?: '/';
         
         if (isset($this->routes[$method][$uri])) {
-            return call_user_func($this->routes[$method][$uri]);
+            $method = call_user_func($this->routes[$method][$uri]);
+            if(is_array($method)){
+                header("Content-type: application/json");
+                echo json_encode($method);
+                die();
+            } else {
+                return $method;
+            }
         }
         
         if(isset($this->routes[$method])) {
