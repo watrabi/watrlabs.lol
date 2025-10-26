@@ -82,8 +82,8 @@ html, body {
 }
 
 .nav-group {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     align-content: center;
 }
 
@@ -168,6 +168,13 @@ html, body {
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 480px) {
+  .item-group {
+    flex-direction: column-reverse;
+  }
+}
+
 
 .item-container {
     display: flex;

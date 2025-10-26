@@ -27,7 +27,8 @@ try {
         $router = new routing();
 
         $routers = [
-            "web"
+            "web",
+            "auth"
         ];
 
         foreach ($routers as $r) {
