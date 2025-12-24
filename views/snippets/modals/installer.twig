@@ -1,0 +1,32 @@
+<iframe id="downloadInstallerIFrame" style="visibility:hidden;height:0;width:1px;position:absolute"></iframe>
+
+<div id="InstallationInstructions"  class="modalPopup blueAndWhite" style="display:none;overflow:hidden" >
+    <a id="CancelButton2" onclick="return Roblox.Client._onCancel();" class="ImageButton closeBtnCircle_35h ABCloseCircle"></a>
+    <div style="padding-bottom:10px;text-align:center">
+    <br /><br />
+    </div>
+</div>
+
+<script type='text/javascript' src='http://js.watrbx.wtf/706d66e6b4e550acb2d7af1caaebcaf4.js'></script>
+<script type="text/javascript">
+    Roblox.Client._skip = '/install/unsupported.aspx';
+    Roblox.Client._CLSID = '';
+    Roblox.Client._installHost = '';
+    Roblox.Client.ImplementsProxy = false;
+    Roblox.Client._silentModeEnabled = false;
+    Roblox.Client._bringAppToFrontEnabled = false;
+    Roblox.Client._installSuccess = function() { console.log("This would have tracked you but we don't track.") };
+    
+    $(function () {
+        Roblox.Client.Resources = {
+            //<sl:translate>
+            here: "here",
+            youNeedTheLatest: "You need Our Plugin for this.  Get the latest version from ",
+            plugInInstallationFailed: "Plugin installation failed!",
+            errorUpdating: "Error updating: "
+            //</sl:translate>
+        };
+    });
+    
+</script>
+

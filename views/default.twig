@@ -1,8 +1,311 @@
 {% extends "models/base.twig" %}
-{% block pageName %}landing{% endblock %}
+{% block pageName %}Landing{% endblock %}
 {% block body %}
-    <div class="header">
-        <h1>Hello World!</h1>
-        <p>This is from <s>laravel</s> watrkit 2.5!</p>
+        <div id="BodyWrapper">
+            <div id="RepositionBody"><div id="Body" style='width:970px;'>
+                
+    
+
+    
+    <script type = "text/javascript">
+        //Code for A|B|C test- just one/all goto burning ma
+            switch (0) {
+                case 0:
+                    break;
+                case 1:
+                    $("#PlayNowButton").css('visibility', 'hidden');
+                    $(function () {
+                        $('.FeaturedGameHeader').css('visibility', 'hidden');
+                        $('.FeaturedGameHeader').css('height', '0px');
+                        $('.FeaturedGamePlayButton').css('height', '290px');
+                    });
+                    break;
+                case 2:
+                    $('.SignUpAndPlay').attr('href', "");
+                    $('.SignUpAndPlay').click(function () {
+                        $('.VisitButtonPlay').click();
+                        return false;
+                    });
+                    $(function () {
+                        $('#ctl00_cphRoblox_MoneyMachine_PlayNowButton').attr('href', "");
+                        $('#ctl00_cphRoblox_MoneyMachine_PlayNowButton').click(function () {
+                            $('.VisitButtonPlay').click();
+                            return false;
+                        });
+                    });
+
+                    //set href of FeaturedGamesPlay to "burning man"s
+                    break;
+            }
+            //Code for bigPlayNowButtonLocation A|B test
+            if(false){
+                $(function () {
+					$('#ctl00_cphRoblox_rbxVisitButtons_FeaturedGameButton').attr('placeid', 1818);
+					$('#FeaturedGameButton').attr('placeid', 1818);
+                });
+            }
+            //else is already acting as needed
+        </script>
+        
+    
+    <div class="ShadowedStandardBox TopPanel" style="float: left; margin: 0px;">     
+        <div id="ctl00_cphRoblox_FrontPageLogin" class="FrontPageLoginBox">
+            
+
+<div id="LoginViewContainer">
+    
+
+            <script type="text/javascript" language="javascript">
+                function dologin() {
+                    document.getElementById("username").value = document.getElementById("txtUsername").value;
+                    document.getElementById("password").value = document.getElementById("txtPassword").value;
+                    document.forms[1].submit();
+                }
+            </script>
+
+<div class="DarkGradientBox DGBContainerShort">
+    <div class="DGB_Header">Member Login</div>
+    <div class="DGB_Content" style="padding:0px;">
+        <div class="form-outer">  
+        <!-- Enter key submission hack - IE -->
+        <div class="form-inner label-column">
+            <div for="txtUsername" class="DGB_Label" style="top:0px;margin-bottom:10px;">Username:</div> 
+            <div for="txtPassword" class="DGB_Label passwordInput" style="*top:2px;">Password:</div>
+        </div>
+        <div class="form-inner input-column">
+            <input type="text" class="DGB_TextBox" id="txtUsername"  tabindex="1" style="margin-bottom:10px;margin-right:0px;"/>
+            <input type="password" onkeypress="if (event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {dologin(); return false;} else {return true;}}"
+                id="txtPassword" class="DGB_TextBox" style="margin-right:0px;" tabindex="2"/>
+            <span id="ForgetPasswordPrompt"><a href="/Login/ResetPasswordRequest.aspx">Forget your password?</a></span> 
+            <div class="clear"></div>
+        </div>
+        </div>
+
+
+        <div style="margin-top: 9px; text-align: center;">
+            <a class="ControlLoginButton" onclick="dologin(); return false;" href="#" ref="form-login" tabindex="3">Sign In</a>
+        </div>       
+
     </div>
+</div>
+        
+</div>
+
+
+            <div id="ctl00_cphRoblox_SeparateSignup" class="separateSignUpFromLoginWithBorder">
+	            
+<div id="SplashPageConnect" class="fbSplashPageConnect">
+	<a class="facebook-login"  href="/facebook/signin?returnTo=%2FMy%2FHome.aspx" target="_top" ref="form-facebook">
+		<span class="left"></span>
+		<span class="middle">Login with Facebook<span>Login with Facebook</span></span>
+		<span class="right"></span>
+	</a>
+</div>
+                <div class="CenterSignupText">
+                    <span class="not-a-member">Not a member?</span>
+                    <a href="Login/NewAge.aspx" class="btn-medium btn-neutral" style="vertical-align: bottom; margin-left:5px;">Sign Up<span class="btn-text">Sign Up</span></a>
+                </div>
+            </div> 
+        </div>
+        
+
+        <div class="FrontPageVideoIntro">
+            
+                    <video src="https://magntt.com/resources/duv.mp4" controls="" style="background-color: black;" width="380" height="250"></video>
+                
+            </div>
+            <div style="float:right">
+	            
+                
+				
+
+	<div id="FeaturedGameButtonContainer" style="height: 1px;" >
+			<div class="FeaturedGameButton VisitButtonPlay" id="FeaturedGameButton" ref="bigplaynow" placeid="41324860"></div>
+	</div>
+		   
+
+<script type="text/javascript">
+	var play_placeId = 0;
+        function redirectPlaceLauncherToLogin() {
+            location.href = "/login/default.aspx?ReturnUrl=" + encodeURIComponent("/Default.aspx");
+        }
+        function redirectPlaceLauncherToRegister() {
+            location.href = "/login/NewAge.aspx?ReturnUrl=" + encodeURIComponent("/Default.aspx");
+        }
+        function fireEventAction(action) {
+            RobloxEventManager.triggerEvent('rbx_evt_popup_action', { action: action });
+        }
+	$(function () { $('.VisitButtonPlay').click(function () {play_placeId=$(this).attr('placeid');Roblox.CharacterSelect.placeid = play_placeId;Roblox.CharacterSelect.show();});$('.FeaturedGameButton').click(function () {});Roblox.CharacterSelect.robloxLaunchFunction = function (genderTypeID) { if (genderTypeID == 3) { var isInsideRobloxIDE = 'website'; if (Roblox && Roblox.Client && Roblox.Client.isIDE && Roblox.Client.isIDE()) { isInsideRobloxIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Play Location', 'Guest', isInsideRobloxIDE]);GoogleAnalyticsEvents.FireEvent(['Play', 'Guest', '', 0]);$(function(){ RobloxEventManager.triggerEvent('rbx_evt_play_guest', {age:'Unknown',gender:'Female'});});} else { var isInsideRobloxIDE = 'website'; if (Roblox && Roblox.Client && Roblox.Client.isIDE && Roblox.Client.isIDE()) { isInsideRobloxIDE = 'Studio'; };GoogleAnalyticsEvents.FireEvent(['Play Location', 'Guest', isInsideRobloxIDE]);GoogleAnalyticsEvents.FireEvent(['Play', 'Guest', '', 1]);$(function(){ RobloxEventManager.triggerEvent('rbx_evt_play_guest', {age:'Unknown',gender:'Male'});});}play_placeId = (typeof $(this).attr('placeid') === 'undefined') ? play_placeId : $(this).attr('placeid'); Roblox.Client.WaitForRoblox(function() { RobloxLaunch.RequestGame('PlaceLauncherStatusPanel', play_placeId, genderTypeID); }); return false;};});;
+</script>
+            </div> 
+    </div>    
+
+    <!-- right column -->
+    <div class="overrideColumn2c">
+        <div id="ctl00_cphRoblox_boxAdPanel" style="padding-left:5px;">
+	
+            <div style="height: 282px;">
+                <div class="ShadowedStandardBox" style="float:left;" id="FrontPageRectangleAd">
+                    <div class="Shadow"></div>
+                    
+            
+<span id='3139373230303133' class="GPTAd rectangle" data-js-adtype="gptAd">
+    <script type="text/javascript">
+        googletag.cmd.push(function () {
+            googletag.display("3139373230303133");
+        });
+    </script>
+</span> 
+    <a class="BadAdButton"
+        href="/Ads/ReportAd.aspx"
+        title="click to report an offensive ad">[ report ]</a>
+
+
+
+                </div>
+            </div>
+        
+</div>
+        
+        <div class="SidePanel" style="">
+            <h2 >Roblox News</h2>
+            <div id="ctl00_cphRoblox_NewsFeed1_pRobloxNews">
+	
+    
+    <div id="RobloxNews" style="float: none; width: 100%; overflow: visible;">
+        <div style="margin-bottom: 15px;">
+            
+                
+                    <div style="background: url(/images/BulletPointArrow.png) no-repeat center left;padding-left: 13px;margin-bottom: 10px;">
+                        <a href="http://blog.roblox.com/2013/08/you-can-now-toggle-outlines/?utm_source=rss&utm_medium=rss&utm_campaign=you-can-now-toggle-outlines" ref="news-article">You Can Now Toggle Outlines</a>
+                    </div>
+                
+                    <div style="background: url(/images/BulletPointArrow.png) no-repeat center left;padding-left: 13px;margin-bottom: 10px;">
+                        <a href="http://blog.roblox.com/2013/08/bloxcon-new-york-in-retrospect/?utm_source=rss&utm_medium=rss&utm_campaign=bloxcon-new-york-in-retrospect" ref="news-article">BLOXcon New York in Retrospect</a>
+                    </div>
+                
+                    <div style="background: url(/images/BulletPointArrow.png) no-repeat center left;padding-left: 13px;margin-bottom: 10px;">
+                        <a href="http://blog.roblox.com/2013/08/bloxcon-new-york-city-in-pictures/?utm_source=rss&utm_medium=rss&utm_campaign=bloxcon-new-york-city-in-pictures" ref="news-article">BLOXcon New York City in Pictures</a>
+                    </div>
+                
+                    <div style="background: url(/images/BulletPointArrow.png) no-repeat center left;padding-left: 13px;margin-bottom: 10px;">
+                        <a href="http://blog.roblox.com/2013/08/crossfire-crazyblox-and-erikwesley96-talk-course-design/?utm_source=rss&utm_medium=rss&utm_campaign=crossfire-crazyblox-and-erikwesley96-talk-course-design" ref="news-article">Crossfire: Crazyblox and Erikwesley96 Talk Course Design</a>
+                    </div>
+                
+                
+        </div>
+        <a href="http://blog.roblox.com" class="SeeMore">See More</a><img border="0" alt="See more! " src="http://images.rbxcdn.com/efe86a4cae90d4c37a5d73480dea4cb1.png" style="width:9px; height:9px;" style="margin:0px;">
+        
+    </div>
+
+</div>
+        </div>
+    </div>
+    
+    <!-- left column -->
+    <div class="overrideColumn1c" >
+        <div style="margin: 5px 0; width: 550px;"><a href="/Games.aspx" class="RobloxFreeBuildingBanner" style="background-image: url('http://images.rbxcdn.com/f0a141183a3c750815c53e4ad0d07d56.jpg');"></a></div>
+        
+        <div class="Content FeaturedGameBox">
+            
+
+<style>
+    .PlaceStatLabel
+    {
+	    /* intentionally empty */
+    }
+    .PlaceStatValue
+    {
+    	/* color: #888; */    	
+        margin-left: 15px;
+        font-weight: bold;
+    }
+</style>
+
+
+<h1 style="margin:0px;">Featured Free Game</h1>
+<br />
+<span id="ctl00_cphRoblox_FeaturedGames1_GameName" class="placeName notranslate">Five Nights at Chuck E. Cheese</span> 
+by 
+<a id="ctl00_cphRoblox_FeaturedGames1_CreatorHyperLinkNew" class="notranslate" ref="featured-username" href="User.aspx?ID=261">VMware</a>
+
+<div class="FeaturedGame">
+    <div class="FeaturedGameImage">
+    <a id="ctl00_cphRoblox_FeaturedGames1_AssetThumbnailImage" title="8 Million Visits! Sword Fights on the Heights IV - a ROBLOX free game" href="/8-Million-Visits-Sword-Fights-on-the-Heights-IV-place?id=47324" style="display:inline-block;height:230px;width:420px;cursor:pointer;"><img src="https://cdn.watrbx.wtf/7c271649b7f25b6b5a15768070e322da" height="230" width="420" border="0" onerror="return Roblox.Controls.Image.OnError(this)" alt="8 Million Visits! Sword Fights on the Heights IV - a ROBLOX free game" /></a>
+    </div>
+    <div class="FeaturedGameInfo">
+        <a class="PlayThisFeaturedGame" style="background-image: url('http://images.rbxcdn.com/149e8aed68b5902254193cdc9923f024.png')" href='/8-Million-Visits-Sword-Fights-on-the-Heights-IV-place?id=47324' title="Play this free game!" ref="featured-playthis"></a>
+        <div id="LastUpdateLabelDiv" class="PlaceStatLabel">Updated:</div>
+        <div id="LastUpdate" class="PlaceStatValue">6 or 7 days ago</div>
+        <div id="FavoritedLabelDiv" class="PlaceStatLabel">Favorited:</div>
+        <div id="Favorited" class="PlaceStatValue"><span class="notranslate">186,907</span> times</div>
+        <div id="VisitedPanelLabelDiv" class="PlaceStatLabel">Visited:</div>
+        <div id="ctl00_cphRoblox_FeaturedGames1_VisitedPanel" class="Visited PlaceStatValue"><span class="notranslate">8,193,032</span> times</div>
+    </div>
+</div>
+
+
+        </div>
+        
+            <div style="float:left;padding-top: 10px;">
+                <a href="https://twitter.com/ROBLOX" class="twitter-follow-button" data-show-count="false">Follow @ROBLOX</a>
+            </div>
+        
+    </div>  
+
+    <br clear="all" />    
+    <img src="http://media.fastclick.net/w/tre?ad_id=20713;evt=13114;cat1=14473;cat2=14474" id="ctl00_cphRoblox_fastclick" border="0" height="1" width="1" />
+
+    <script type="text/javascript">
+        FacebookLogout = function() {
+            var appid = '190191627665278';
+            FBLogout(appid);
+        };
+
+        // handle a session response from any of the auth related calls
+        function handleLogout(response) {
+            // if we dont have a session, just hide the user info
+            if (!response.authResponse) {
+                clearDisplay();
+                return;
+            }
+
+            
+            return;
+            
+            var modalProperties = { escClose: true, opacity: 80, overlayCss: { backgroundColor: "#000" }, position: [120, 0] };
+            $("#ConfirmFacebookLogout").modal(modalProperties);
+        }
+    </script>
+
+        <div id="ConfirmFacebookLogout" class="GuestModePromptModal" style="width:400px; display:none">
+            <div id="GuestDialog" style="background-color: white;">
+                <div style="height:20px;"></div>
+        
+                <p style="font-size:medium;font-weight:bold;text-align:center; margin-left:10px;margin-right:10px">You are currently logged into Facebook. Also log out of Facebook?</p>     
+        
+                <div style="height:20px;"></div>
+
+                <div style="display:inline-block;" class="simplemodal-close">
+                    <div style="float:left; margin-left:70px;">
+                        <a onclick="FB.logout(clearSession);" id="ctl00_cphRoblox_AccountSyncUp" tabindex="8" class="GreenButton" href="javascript:__doPostBack(&#39;ctl00$cphRoblox$AccountSyncUp&#39;,&#39;&#39;)">
+                            <span>Logout</span>
+                        </a>
+                    </div>
+
+                    <div style="margin-right:50px;" class="simplemodal-close overrideDontLogout">
+                        <a id="ctl00_cphRoblox_LinkButton1" tabindex="8" class="RedButton" href="javascript:__doPostBack(&#39;ctl00$cphRoblox$LinkButton1&#39;,&#39;&#39;)">
+                            <span>Don't Logout</span>
+                        </a>
+                    </div>
+                </div>
+                <div style="height:20px;"></div>
+            </div>
+        </div>
+
+                <div style="clear:both"></div>
+            </div>
+        </div></div> 
+        </div>
+        
 {% endblock %}

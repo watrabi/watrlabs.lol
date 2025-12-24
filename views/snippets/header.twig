@@ -1,16 +1,49 @@
 {% block navbar %}
-<div id="navbar">
-    <div class="nav-group">
-        <a href="/" class="nav-item">{{ env('APP_NAME') }}</a>
-        <a href="/home" class="nav-item">home</a>
+<div class="site-header">
+    <div id="navigation-container">
+        <a href="/Default.aspx" class="btn-logo" data-se="nav-logo"></a>
+        <div id="navigation-menu">
+            <ul>
+                <li><a href="/home" ref="nav-myroblox" data-se="nav-myhome">Home</a></li>
+                <li><a data-se="nav-games" href="/Games.aspx" ref="nav-games" title="Games">Games</a> </li>
+                <li><a data-se="nav-catalog" href="/Catalog" ref="nav-catalog" title="Catalog">Catalog</a></li>
+                <li><a data-se="nav-build" href="/Build/Default.aspx" title="Build" ref="nav-build">Build</a></li>
+                <li><a data-se="nav-upgrade" href="/Upgrades/BuildersClubMemberships.aspx" title="Upgrade" ref="nav-buildersclub">Upgrade</a></li>
+                <li><a data-se="nav-forum" onclick="" href="/Forum/Default.aspx" style="" title="Forum" ref="nav-forum">Forum</a></li>
+                <li class="more-list-item" drop-down-nav-button="more-list-item">
+                    <div class="more-link-container">
+                        <a id="nav-more" title="More" data-se="nav-more" ref="nav-more">More<span id="more-menu-toggle"></span></a> 
+                    </div>
+                    <div class="dropdownnavcontainer" style="display:none;" drop-down-nav-container="more-list-item">
+                        <div class="dropdownmainnav" style="z-index:1023">
+                            <a class="dropdownoption" data-se="nav-more-browse" href="/Browse.aspx" title="People" ref="nav-people"><span>People</span></a>
+                            <a class="dropdownoption" data-se="nav-more-blog" href="http://blog.roblox.com" title="Blog" ref="nav-news"><span>Blog</span></a>
+                                   <a class="dropdownoption" data-se="nav-more-sponsoredpage" href="/SponsoredPage/BLOXcon" title="BLOXcon" ref="nav-sponsoredpage">
+                                       <span style="display:block;">
+                                          <img src="http://images.rbxcdn.com/2e48fdde87c7cf61820a798eae33d3ce">
+                                       </span>
+                                   </a>
+                            <a class="dropdownoption" data-se="nav-more-help" href="/Help/Builderman.aspx" title="Help" ref="nav-help"><span>Help</span></a>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            {% if currentuser is not null %}
+                {% include 'snippets/header/alertspace.twig' %}
+            {% else %}
+                {% include 'snippets/header/login-area.twig' %}
+            {% endif %}
+
     </div>
-    <div class="nav-group">
-        <a href="/auth/sign-up" class="nav-item">Sign Up</a>
-        <a href="/auth/login" class="nav-item">Login</a>
-    </div>
-</div>
-<div id="site-warning">
-    <p>This site is incomplete!</p>
 </div>
 
+{% if currentuser is not null %}
+    {% include 'snippets/header/subheader.twig' %}
+    <div class="forceSpace">&nbsp;</div>
+{% endif %}
+
+
+<noscript><div class="SystemAlert"><div class="SystemAlertText">Please enable Javascript to use all the features on this site.</div></div></noscript>
 {% endblock %}

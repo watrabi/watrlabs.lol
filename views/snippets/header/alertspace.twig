@@ -1,0 +1,75 @@
+<div id="AlertSpace">
+    <div class="AlertItem" style="max-width: 50px;text-align:center;">
+        <a id="lsLoginStatus" data-se="nav-logout" class="logoutButton">Logout</a>
+    </div>
+    <div class="HeaderDivider"></div>
+    
+    <a data-se="nav-tickets" href="/My/Money.aspx?tab=MyTransactions">
+    <div id="TicketsWrapper" class="TicketsAlert AlertItem tooltip-bottom" original-title="Tickets">
+        <div class="icons tickets_icon">
+        </div>
+        <div id="TicketsAlertCaption" class="AlertCaption">{{ currentuser.tix }}</div>
+    </div>
+    </a>
+
+    <a data-se="nav-robux" href="http://www.roblox.com/My/Money.aspx?tab=MyTransactions">
+    <div id="RobuxWrapper" class="RobuxAlert AlertItem tooltip-bottom" original-title="Robux">
+        <div class="icons robux_icon">
+        </div>
+        <div id="RobuxAlertCaption" class="AlertCaption">{{ currentuser.robux }}</div>
+    </div>
+    </a>
+
+    <div class="HeaderDivider"></div>
+    
+    <a data-se="nav-friends" href="http://www.roblox.com/friends.aspx#FriendRequestsTab">
+    <span id="FriendsTextWrapper" class="FriendsAlert AlertItem tooltip-bottom" original-title="1 Friend Requests">
+        <div class="icons friends_icon" style="float:none;">
+        </div>    
+            <div id="FriendsBubble" class="AlertTextWrapper" runat="server">
+                <div class="AlertBox Left"></div>
+                <div class="AlertBox" style="background-position: right; padding-right: 3px">
+                    <div class="AlertText">1</div>
+                </div>
+            </div>
+    </span>
+    </a>
+
+    <a data-se="nav-messages" href="http://www.roblox.com/my/messages">
+    <span id="MessagesTextWrapper" class="MessageAlert AlertItem tooltip-bottom" original-title="Messages">
+        <div class="icons message_icon" style="float:none;">
+        </div>
+    </span>
+    </a>
+    <a data-se="nav-login" href="http://www.roblox.com/User.aspx">
+        <div id="AuthenticatedUserNameWrapper">
+            <div id="AuthenticatedUserName">
+                
+                <span class="login-span notranslate">
+                    <img id="over13icon" src="./ROBLOX.com_files/8ed6b064a35786706f738c0858345c11.png" alt="" style="vertical-align:middle;padding-right:5px;padding-left:0px;" original-title="This is a 13+ account.">
+                    {{ currentuser.username }}
+                </span>
+            </div>
+        </div> 
+
+    </a>
+
+    <script type="text/javascript">
+        ;$(function () {
+            $('#over13icon').tipsy({ gravity: 'n' });
+
+            $("#lsLoginStatus").click(
+                    function () {
+                        var form = $(this).closest('form');
+                        if (form.length == 0) {
+                            form = $("<form></form>").appendTo("body");
+                        }
+                        form.attr('action', '/authentication/logout');
+                        form.attr('method', 'post');
+                        form.submit();
+                    }
+                );
+        });
+
+    </script> 
+</div>

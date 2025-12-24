@@ -203,7 +203,7 @@ class sitefunctions {
                 $page->build_component("status", ["status"=>"confirm", "msg"=>$decoded["message"]]);
                 setcookie("msg", $msg, time() - 500, '');
             } else {
-                //throw new Exception('Invalid message type!');
+                throw new Exception('Invalid message type!');
             }
             
         } else {

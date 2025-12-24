@@ -1,8 +1,75 @@
 {% block footer %}
-<div id="footer">
-    <p>©{{ env('APP_NAME') }} - 2025 - ToS - Privacy Policy</p>
+<div id="Footer" class="LanguageRedesign">
+<div class="FooterNav">
+    <a href="/info/Privacy.aspx"><b>Privacy Policy</b></a>
+    &nbsp;|&nbsp; 
+    <a href="http://corp.roblox.com/advertise-on-roblox">Advertise with Us</a>
+    &nbsp;|&nbsp; 
+    <a href="http://corp.roblox.com/roblox-press">Press</a>
+    &nbsp;|&nbsp; 
+    <a href="http://corp.roblox.com/contact-us">Contact Us</a>
+    &nbsp;|&nbsp;
+    <a href="http://corp.roblox.com/">About Us</a>
+    &nbsp;|&nbsp;
+    <a href="http://blog.roblox.com">Blog</a>
+    &nbsp;|&nbsp;
+    <a href="http://corp.roblox.com/jobs">Jobs</a>
+    &nbsp;|&nbsp;
+    <a href="/Parents.aspx">Parents</a>  
+    <span class="LanguageOptionElement">&nbsp;|&nbsp;</span> 
+    <span runat="server" NavigateUrl="/Parents.aspx" ref="footer-parents" class="LanguageOptionElement LanguageTrigger"  drop-down-nav-button="LanguageTrigger">
+        English&nbsp;<span class="FooterArrow">▼</span>
+        <div class="dropuplanguagecontainer" style="display:none;" drop-down-nav-container="LanguageTrigger">
+            <div class="dropdownmainnav" style="z-index:1023">
+            <a href="/UserLanguage/LanguageRedirect?languageCode=de&amp;relativePath=%2fDefault.aspx"class="LanguageOption js-lang" data-js-langcode="de"><span class="notranslate">Deutsch</span>&nbsp;(German) </a>
+            </div>
+        </div>
+    </span>
 </div>
-<script type="text/javascript" src="/assets/js/watrlabs.js?t=<?=time()?>"></script>
-</body>
-</html>
+<div class="FooterNav">
+    <div id="SEOGenreLinks" class="SEOGenreLinks">
+        <a href="/all-games">All Games</a> 
+        <span>|</span>
+        <a href="/building-games">Building</a> 
+        <span>|</span>
+        <a href="/horror-games">Horror</a> 
+        <span>|</span>
+        <a href="/town-and-city-games">Town and City</a> 
+        <span>|</span>
+        <a href="/military-games">Military</a> 
+        <span>|</span>
+        <a href="/comedy-games">Comedy</a> 
+        <span>|</span>
+        <a href="/medieval-games">Medieval</a> 
+        <span>|</span>
+        <a href="/adventure-games">Adventure</a> 
+        <span>|</span>
+        <a href="/sci-fi-games">Sci-Fi</a> 
+        <span>|</span>
+        <a href="/naval-games">Naval</a> 
+        <span>|</span>
+        <a href="/fps-games">FPS</a> 
+        <span>|</span>
+        <a href="/rpg-games">RPG</a> 
+        <span>|</span>
+        <a href="/sports-games">Sports</a> 
+        <span>|</span>
+        <a href="/fighting-games">Fighting</a> 
+        <span>|</span>
+        <a href="/western-games">Western</a> 
+    </div>
+</div>
+<div class="legal">
+    <div class="left">
+        
+    </div>
+    <div class="right">
+        <p class="Legalese">
+            ROBLOX, "Online Building Toy", characters, logos, names, and all related indicia are trademarks of <a href="http://corp.roblox.com/" ref="footer-smallabout">ROBLOX Corporation</a>, ©2013. Patents pending.
+            ROBLOX is not sponsored, authorized or endorsed by any producer of plastic building bricks, including The LEGO Group, MEGA Brands, and K'Nex, and no resemblance to the products of these companies is intended. Use of this site signifies your acceptance of the <a href="/info/terms-of-service" ref="footer-terms">Terms and Conditions</a>.
+        </p>
+    </div>
+    <div class="clear"></div>
+</div>
+</div>
 {% endblock %}

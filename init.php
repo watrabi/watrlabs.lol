@@ -1,9 +1,11 @@
 <?php
 use Pixie\Connection;
 use Pixie\QueryBuilder\QueryBuilderHandler;
+use watrlabs\authentication;
 global $dotenv;
 global $db;
 global $twig;
+global $currentuser;
 
 spl_autoload_register(function ($class_name) {
     $directory = '../classes/';
@@ -50,7 +52,15 @@ $twig = new \Twig\Environment($loader, [
     'cache' => '../storage/cache',
     'auto_reload' => true
 ]);
+
 $twig->addFunction(new \Twig\TwigFunction('env', function ($key) {
     return $_ENV[$key];
 }));
 
+$auth = new authentication();
+if($auth->hasaccount()){
+    $currentuser = $auth->getuserinfo($_COOKIE["_ROBLOSECURITY"]);
+} else {
+    $currentuser = null;
+}
+$twig->addGlobal('currentuser', $currentuser);

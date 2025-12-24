@@ -28,8 +28,8 @@ try {
 
         $routers = [
             "web",
-            "auth",
-            "authapi"
+            "gameserverapi",
+            "client"
         ];
 
         foreach ($routers as $r) {

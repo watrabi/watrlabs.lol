@@ -1,18 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/assets/base.css?cache=10">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>{% block pageName %}{% endblock %} - {{ env('APP_NAME') }}</title>
-  </head>
-  <body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
+   <!-- MachineID: WEB01 --> <!-- for future reference, this is stationary no load balancing yet -->
+   <head id="ctl00_Head1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true" />
+      <title>
+         {% block pageName %}{% endblock %} - {{ env('APP_NAME') }}
+      </title>
+      <link rel='stylesheet' href='/CSS/Base/CSS/FetchCSS?path=main___ea71c32e74ab91f9995412cd27a8d9a9_m.css' />
+      <link rel='stylesheet' href='/CSS/Base/CSS/FetchCSS?path=page___a16f7f0c4091da445ac33ec48ad51299_m.css' />
+      <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta http-equiv="Content-Language" content="en-us" />
+      <meta name="author" content="ROBLOX Corporation" />
+      <meta id="ctl00_metadescription" name="description" content="User-generated MMO gaming site for kids, teens, and adults. Players architect their own worlds. Builders create free online games that simulate the real world. Create and play amazing 3D games. An online gaming cloud and distributed physics engine." />
+      <meta id="ctl00_metakeywords" name="keywords" content="free games, online games, building games, virtual worlds, free mmo, gaming cloud, physics engine" />
+      <script type='text/javascript' src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js'></script>
+      <script type='text/javascript'>window.jQuery || document.write("<script type='text/javascript' src='/js/jquery/jquery-1.7.2.min.js'><\/script>")</script>
+      <script type='text/javascript' src='//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js'></script>
+      <script type='text/javascript'>window.Sys || document.write("<script type='text/javascript' src='/js/Microsoft/MicrosoftAjax.js'><\/script>")</script>
+      <script type='text/javascript' src='http://js.rbxcdn.com/103769da504cfe7c5cd5ba08354ef29a.js'></script>
+      <script type='text/javascript'>Roblox.config.externalResources = ['/js/jquery/jquery-1.7.2.min.js','/js/json2.min.js'];Roblox.config.paths['jQuery'] = 'http://js.rbxcdn.com/29cf397a226a92ca602cb139e9aae7d7.js';Roblox.config.paths['Pagelets.BestFriends'] = 'http://js.rbxcdn.com/c8acaba4214074ed4ad6f8b4a9647038.js';Roblox.config.paths['Pages.Catalog'] = 'http://js.rbxcdn.com/c8f61a230e6ad34193b40758f1499a3d.js';Roblox.config.paths['Pages.Messages'] = 'http://js.rbxcdn.com/f772272ef93399adea361e94e807f79f.js';Roblox.config.paths['Resources.Messages'] = 'http://js.rbxcdn.com/fb9cb43a34372a004b06425a1c69c9c4.js';Roblox.config.paths['Widgets.AvatarImage'] = 'http://js.rbxcdn.com/b7f418a5fefacfd21f2c86b495b4698f.js';Roblox.config.paths['Widgets.DropdownMenu'] = 'http://js.rbxcdn.com/d83d02dd89808934b125fa21c362bcb9.js';Roblox.config.paths['Widgets.GroupImage'] = 'http://js.rbxcdn.com/3e692c7b60e1e28ce639184f793fdda9.js';Roblox.config.paths['Widgets.HierarchicalDropdown'] = 'http://js.rbxcdn.com/e8b579b8e31f8e7722a5d10900191fe7.js';Roblox.config.paths['Widgets.ItemImage'] = 'http://js.rbxcdn.com/facde7fc56e53e1ef9ee75203bc76bb4.js';Roblox.config.paths['Widgets.PlaceImage'] = 'http://js.rbxcdn.com/08e1942c5b0ef78773b03f02bffec494.js';Roblox.config.paths['Widgets.Suggestions'] = 'http://js.rbxcdn.com/a63d457706dfbc230cf66a9674a1ca8b.js';Roblox.config.paths['Widgets.SurveyModal'] = 'http://js.rbxcdn.com/d6e979598c460090eafb6d38231159f6.js';</script><script type="text/javascript">
+         $(function () {
+             Roblox.JSErrorTracker.initialize({'internalEventListenerPixelEnabled': true});
+         });
+      </script>
+      <script type='text/javascript' src='https://js.watrbx.wtf/0292041aea19bd7b049a08e28cf88ca7.js'></script>
+      <script type='text/javascript' src='https://js.watrbx.wtf/f2b0cc7f4fd56709c2fe6b913866cd4c.js'></script>
+      <link rel="canonical" href="http://www.roblox.com/"/>
+      <meta property="og:title" content="Free Games at ROBLOX.com" />
+      <meta property="og:type" content="game" />
+      <meta property="og:url" content="http://www.roblox.com/Default.aspx" />
+      <meta property="og:site_name" content="ROBLOX" />
+      <meta property="og:description" content="User-generated MMO gaming site for kids, teens, and adults. Players architect their own worlds. Builders create free online games that simulate the real world. Create and play amazing 3D games. An online gaming cloud and distributed physics engine." />
+   </head>
+   <body>
+      
+      
+      <script type="text/javascript">Roblox.XsrfToken.setToken('');</script>
+
+      <form name="aspnetForm" method="post" action="/" id="aspnetForm">
+
+      <div id="MasterContainer">
+         <div id="Container">
         {% include 'snippets/header.twig' %}
+         <div class="forceSpace">&nbsp;</div>
+      
+
+         
+         
         <div id="main">
           {% block body %}{% endblock %}
         </div>
         {% include 'snippets/footer.twig' %}
-  </body>
+        {% block footerExtras %}{% endblock %}
+        <style type="text/css">
+            html
+            {
+                background-color: #123F83;
+            }
+         </style>
+         </div>
+         </div>
+         {% include 'snippets/modals/generic.twig' %}
+         {% include 'snippets/modals/preroll.twig' %}
+         {% include 'snippets/modals/installer.twig' %}
+         {% include 'snippets/modals/placelauncher.twig' %}
+          {% if currentuser is not null %}
+            {% include 'snippets/modals/chat.twig' %}
+         {% endif %}
+      </form>      
+      
+   </body>
 </html>

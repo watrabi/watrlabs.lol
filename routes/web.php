@@ -10,6 +10,36 @@ $router->get("/", function() {
     echo $twig->render('default.twig');
 });
 
+$router->get("/Default.aspx", function() {
+    global $twig;
+    echo $twig->render('default.twig');
+});
+
+$router->get("/CSS/Base/CSS/FetchCSS", function() {
+    global $router;
+    
+    if(!isset($_GET["path"])){
+        $router->return_status(404);
+    } else {
+        $path = $_GET["path"];
+    }
+    
+    $sanitize = new sanitize();
+    $path = $sanitize::get($path);
+    
+    if(file_exists("../storage/public/css/" . $path)){
+        $css = file_get_contents("../storage/public/css/" . $path);
+        header("Content-type: text/css");
+        echo $css;
+        die();
+        
+    } else {
+        
+        $router->return_status(404);
+    }
+    
+});
+
 $router->set404(function(){
     global $twig;
     echo $twig->render('status_codes/404.twig');

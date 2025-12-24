@@ -1,11 +1,20 @@
 {% extends "models/base.twig" %}
 {% block pageName %}Login{% endblock %}
+{% block headerExtras %}
+<link rel="stylesheet" href="/assets/css/login.css">
+{% endblock %}
 {% block body %}
     <div class="div-center center">
         <div class="item-group">
             <div>
-                <h1>Login</h1>
-                <p>No login for you</p>
+                <form>
+                    <h1>log in</h1>
+                    <input type="username" name="username" id="username" placeholder="Username" required>
+                    <br><br>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <br><br>
+                    <button class="button">login</button>
+                </form>
             </div>
         </div>
      </div>   

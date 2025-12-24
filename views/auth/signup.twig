@@ -1,12 +1,29 @@
 {% extends "models/base.twig" %}
 {% block pageName %}Login{% endblock %}
+{% block headerExtras %}
+<link rel="stylesheet" href="/assets/css/login.css">
+{% endblock %}
 {% block body %}
     <div class="div-center center">
         <div class="item-group">
             <div>
-                <h1>Sign Up</h1>
-                <p>No account for you</p>
+                <div id="error-area"></div>
+                <form id="signupform">
+                    <h1>Sign Up</h1>
+                    <input type="username" name="username" id="username" placeholder="Username" required>
+                    <br><br>
+                    <input type="email" name="email" id="email" placeholder="E-Mail (optional)">
+                    <br><br>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <br><br>
+                    <input type="password" name="confpassword" id="confpassword" placeholder="Confirm Password">
+                    <br><br>
+                    <button id="signup" class="button">Sign Up</button>
+                </form>
             </div>
         </div>
      </div>   
+{% endblock %}
+{% block footerExtras %}
+<script src="/assets/js/signup.js?t=11"></script>
 {% endblock %}
